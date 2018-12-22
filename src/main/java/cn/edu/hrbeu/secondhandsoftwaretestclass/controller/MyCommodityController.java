@@ -1,6 +1,7 @@
 package cn.edu.hrbeu.secondhandsoftwaretestclass.controller;
 
 import cn.edu.hrbeu.secondhandsoftwaretestclass.bean.Commodity;
+import cn.edu.hrbeu.secondhandsoftwaretestclass.bean.CommodityWithMyTime;
 import cn.edu.hrbeu.secondhandsoftwaretestclass.bean.User;
 import cn.edu.hrbeu.secondhandsoftwaretestclass.service.CommodityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class MyCommodityController {
             //未登录
             return "fail";
         }
-        List<Commodity> commodityList = commodityService.findCommodityByUserId(user.getUserId());
+        List<CommodityWithMyTime> commodityList = commodityService.findCommodityByUserId(user.getUserId());
         session.setAttribute("commodityList",commodityList);
         return "myCommodity";
     }

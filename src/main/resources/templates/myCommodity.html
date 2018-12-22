@@ -37,17 +37,17 @@
                 <span class="card-text" th:if="${commodity.commodityKind}==6 ">其它</span>
             </p>
             <p>
-                <span>上架日期:</span><span class="card-text" th:text="${commodity.commodityTime}">这里是商品上架日期</span>
+                <span>上架日期:</span><span class="card-text" th:text="${commodity.myCommodityTime}">这里是商品上架日期</span>
             </p>
             <p>
-                <span>截止日期:</span><span class="card-text" th:text="${commodity.commodityDeadline}">这里是商品截止日期</span>
+                <span>截止日期:</span><span class="card-text" th:text="${commodity.myCommodityDeadline}">这里是商品截止日期</span>
             </p>
             <p>
                 <span>联系方式:</span><span class="card-text" th:text="${commodity.contactWay}">这里是联系方式</span>
             </p>
-            <p>
-                <span>售卖人ID:</span><span class="card-text" th:text="${commodity.userId}">这里是售卖人ID</span>
-            </p>
+            <!--<p>-->
+                <!--<span>售卖人ID:</span><span class="card-text" th:text="${commodity.userId}">这里是售卖人ID</span>-->
+            <!--</p>-->
             <p>
                 <span>详细描述:</span><span class="card-text" th:text="${commodity.commodityDetail}">这里是商品详细描述</span>
             </p>

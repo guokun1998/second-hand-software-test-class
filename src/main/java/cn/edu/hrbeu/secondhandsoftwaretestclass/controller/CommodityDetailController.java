@@ -1,6 +1,7 @@
 package cn.edu.hrbeu.secondhandsoftwaretestclass.controller;
 
 import cn.edu.hrbeu.secondhandsoftwaretestclass.bean.Commodity;
+import cn.edu.hrbeu.secondhandsoftwaretestclass.bean.CommodityWithMyTime;
 import cn.edu.hrbeu.secondhandsoftwaretestclass.service.CommodityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,7 @@ public class CommodityDetailController {
     @RequestMapping("/commodity/detail")
     public String queryCommodityById(HttpServletRequest httpServletRequest, HttpSession httpSession,ModelAndView modelAndView){
         Integer commodityId = Integer.valueOf(httpServletRequest.getParameter("commodityId"));
-        Commodity commodity = commodityService.findCommodityByCommodityId(commodityId);
+        CommodityWithMyTime commodity = commodityService.findCommodityByCommodityId(commodityId);
         httpSession.setAttribute("commodity",commodity);
         return "easyCommodityDetail";
     }

@@ -26,7 +26,7 @@ public interface CommodityMapper {
 
     @Select("SELECT * FROM commodity " +
             "WHERE commodity_name LIKE '%${commodityName}%'")
-    public List<Commodity> findCommodity(Commodity commodity);
+    public List<Commodity> findCommodityByCommodityNameBlured(Commodity commodity);
 
     @Select("SELECT * FROM commodity " +
             "WHERE user_id=#{userId}")

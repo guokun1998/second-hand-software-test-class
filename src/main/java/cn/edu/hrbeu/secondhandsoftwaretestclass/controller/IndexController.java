@@ -1,6 +1,7 @@
 package cn.edu.hrbeu.secondhandsoftwaretestclass.controller;
 
 import cn.edu.hrbeu.secondhandsoftwaretestclass.bean.Commodity;
+import cn.edu.hrbeu.secondhandsoftwaretestclass.bean.CommodityWithMyTime;
 import cn.edu.hrbeu.secondhandsoftwaretestclass.bean.User;
 import cn.edu.hrbeu.secondhandsoftwaretestclass.service.CommodityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,7 @@ public class IndexController {
 
     @RequestMapping({"/","/index.html"})
     public String indexShow(HttpSession session){
-        List<Commodity> commodityList = commodityService.find9FirstCommodity();
+        List<CommodityWithMyTime> commodityList = commodityService.find9FirstCommodity();
         session.setAttribute("indexCommodityList",commodityList);
         return "index";
     }

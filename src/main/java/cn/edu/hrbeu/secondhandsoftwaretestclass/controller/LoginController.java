@@ -26,6 +26,8 @@ public class LoginController {
     public String login(User user, HttpSession session){
         User user1 = userService.findUserByStudentIdAndPassword(user);
         if (user1 == null){
+            String message = "学号或密码错误";
+            session.setAttribute("message",message);
             return "fail";
         }
         else {

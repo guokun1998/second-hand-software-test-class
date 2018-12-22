@@ -26,7 +26,11 @@ public class CommodityService {
 
 
     public List<Commodity> findCommodity(Commodity commodity){
-        return commodityMapper.findCommodity(commodity);
+        List<Commodity> commodityList = commodityMapper.findCommodity(commodity);
+//        for(Commodity temp:commodityList){
+//
+//        }
+        return commodityList;
     }
 
 

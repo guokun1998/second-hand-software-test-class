@@ -20,6 +20,16 @@
             function checkall(){
                 var res = true;
                 var usrTel = document.getElementById('inputPhoneNumber');
+                var userName = document.getElementById('inputName').value;
+                var userStudentId = document.getElementById('inputStudentId').value;
+                if (userName == null){
+                    alert('用户名不能为空');
+                    res = false;
+                }
+                if (userStudentId == null){
+                    alert('学号不能为空');
+                    res = false;
+                }
                 var pattern= /^1\d{10}$/;
                 if(!pattern.test(usrTel.value))
                 {
@@ -31,7 +41,7 @@
                 var pattern = /^\w{6,12}$/; //密码要在6-12位
                 if(!pattern.test(p1.value)){
                     alert("密码不合规范,请输入6-12位密码");
-                    p1.value = "";
+                    // p1.value = "";
                     res = false;
 
                 }

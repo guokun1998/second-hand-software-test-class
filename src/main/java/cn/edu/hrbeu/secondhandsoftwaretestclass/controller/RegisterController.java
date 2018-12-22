@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class RegisterController {
 
@@ -20,7 +22,7 @@ public class RegisterController {
     }
 
     @PostMapping("/register/try")
-    public String register(User user){
+    public String register(HttpSession session,User user){
         //查询手机号，学号是否重复
         User user1 = userService.findUserByPhoneAndStudentId(user);
         if (user1 == null){
@@ -28,6 +30,8 @@ public class RegisterController {
             return "success";
         }
         else {
+            String message = "学号或手机号重复";
+            session.setAttribute("message",message);
             return "fail";
         }
     }

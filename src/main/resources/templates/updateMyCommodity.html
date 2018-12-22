@@ -29,13 +29,13 @@
     </p>
     <div>
         <label for="fave" class="form-control">商品类别:
-            <select id="fave"name="commodityKind">
-                <option value="1" label="书">书</option>
-                <option value="2" label="服装">服装</option>
-                <option value="3" label="电子设备">电子设备</option>
-                <option value="4" label="虚拟商品">虚拟商品</option>
-                <option value="5" label="美妆个护">美妆个护</option>
-                <option value="6" selected label="其他">其他</option>
+            <select id="fave"name="commodityKind" >
+                <option value="1" th:selected="${session.commodity.commodityKind==1}" label="书">书</option>
+                <option value="2" th:selected="${session.commodity.commodityKind==2}" label="服装">服装</option>
+                <option value="3"  th:selected="${session.commodity.commodityKind==3}" label="电子设备">电子设备</option>
+                <option value="4" th:selected="${session.commodity.commodityKind==4}" label="虚拟商品">虚拟商品</option>
+                <option value="5" th:selected="${session.commodity.commodityKind==5}" label="美妆个护">美妆个护</option>
+                <option value="6" th:selected="${session.commodity.commodityKind==6}" label="其他">其他</option>
             </select>
         </label>
     </div>

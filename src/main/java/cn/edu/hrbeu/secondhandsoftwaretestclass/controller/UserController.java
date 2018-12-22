@@ -33,6 +33,8 @@ public class UserController {
 
         if (repeatUser != null && repeatUser.getUserId() != user1.getUserId()){
             //占用了已存在的别人的手机号
+            String message = "该手机号已被别人占用";
+            session.setAttribute("message",message);
             return "redirect:fail";
         }
 

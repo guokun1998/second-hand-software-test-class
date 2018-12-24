@@ -29,6 +29,10 @@ public class UserService {
         userMapper.updateUser(user);
     }
 
+    public void updateUserPowerByUserId(User user){
+        userMapper.updateUserPower(user);
+    }
+
     public User findUserByPhoneAndStudentId(User user){
         User user1 = userMapper.findUserByPhoneAndStudentId(user);
         return user1;

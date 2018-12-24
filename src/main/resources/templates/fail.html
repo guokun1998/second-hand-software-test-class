@@ -5,11 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-<h1>失败</h1>
-<a href="/">返回主页</a>
-<p>
-    <span>错误消息</span>
-    <span th:text="${session.message}"></span>
-</p>
+<div align="center">
+
+    <h1>失败</h1>
+    <a href="/">返回主页</a>
+    <p>
+        <span>错误消息:</span>
+        <span th:text="${session.message}"></span>
+    </p>
+    <p>
+        <span>如果有什么疑问，请点击</span>
+        <a href="tencent://Message/?Uin=365690468&websiteName=q-zone.qq.com&Menu=yes">
+            <img border="0" SRC="http://wpa.qq.com/pa?p=1:365690468:14" alt="点击这里给我发消息">
+        </a>
+        <span>联系管理员</span>
+    </p>
+</div>
 </body>
 </html>

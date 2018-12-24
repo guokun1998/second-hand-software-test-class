@@ -31,7 +31,15 @@ public class LoginController {
             return "fail";
         }
         else {
-            session.setAttribute("user",user1);
+            if (user1.getUserPower() == 0){
+                String message = "该账户已被封禁，请联系管理员解封";
+                session.setAttribute("message",message);
+                return "fail";
+            }
+            else {
+                session.setAttribute("user",user1);
+
+            }
 
             return "redirect:/";
         }

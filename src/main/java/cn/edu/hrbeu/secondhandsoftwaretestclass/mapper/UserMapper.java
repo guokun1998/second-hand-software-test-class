@@ -19,6 +19,11 @@ public interface UserMapper {
             "WHERE user_id=#{userId}")
     public void updateUser(User user);
 
+    @Select("UPDATE user " +
+            "SET user_power=#{userPower} " +
+            "WHERE user_id=#{userId}")
+    public void updateUserPower(User user);
+
     @Select("SELECT * FROM user WHERE user_id=#{userId}")
     public User findUserByUserId(Integer userId);
 

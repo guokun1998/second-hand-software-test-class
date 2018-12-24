@@ -44,6 +44,9 @@
                             <li>
                                 <a href="/offerCommodity" target="_blank">上架商品</a>
                             </li>
+                            <li th:if="${session.user.userPower==2}">
+                                <a href="/administrator" target="_blank">管理页面</a>
+                            </li>
                             <li>
                                 <a href="/logout">退出</a>
                             </li>
